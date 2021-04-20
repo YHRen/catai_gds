@@ -2,14 +2,15 @@
 cpu: AMD EPYC 7742 64-Core Processor x 2
 gpu: A100 x 8
 
-
-mode `-r` `-w` | read, write
-buffer size `-b` | 1M, 4M, 16M, 32M
-number of workers `-t` | 8, 16, 32
-random offset `-rand` |  on, off
-`--gdsbufreg` | switch | no changes
-`--cufile` | switch | affects throughputs 3.4GB/s -> 6GB/s
-`--direct` | switch | first time very slow, 1GB/s, but consequent tries much faster , 12GB/sec 
+| flag                     | values             | comment                                                                  |
+| ------------------------ | ------------------ | ---------                                                                |
+| mode `-r` `-w`           | read, write        |                                                                          |
+| buffer size `-b`         | 1M, 4M, 16M, 32M   |                                                                          |
+| number of workers `-t`   | 8, 16, 32          |                                                                          |
+| random offset `-rand`    | on, off            |                                                                          |
+| `--gdsbufreg`            | switch             | no changes                                                               |
+| `--cufile`               | switch             | affects throughputs 3.4GB/s -> 6GB/s                                     |
+| `--direct`               | switch             | first time very slow, 1GB/s, but consequent tries much faster , 12GB/sec |
 
 ## Write a test file
 
@@ -42,7 +43,7 @@ random offset `-rand` |  on, off
 ```
 
 
-##  Block device & large shared file testing 
+##  Block device & large shared file testing
 
 ```
 (base) yren@athena:~/git/elbencho/bin$ ./elbencho --help-bdev
