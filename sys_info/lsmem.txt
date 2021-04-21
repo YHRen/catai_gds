@@ -1,0 +1,8 @@
+RANGE                                   SIZE  STATE REMOVABLE      BLOCK
+0x0000000000000000-0x00000000afffffff   2.8G online       yes       0-21
+0x0000000100000000-0x000000c04fffffff 765.3G online       yes    32-6153
+0x0000010000000000-0x0000023fffffffff   1.3T online       yes 8192-18431
+
+Memory block size:       128M
+Total online memory:       2T
+Total offline memory:      0B

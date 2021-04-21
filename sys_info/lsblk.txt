@@ -1,0 +1,25 @@
+NAME        MAJ:MIN RM  SIZE RO TYPE  MOUNTPOINT
+loop0         7:0    0 55.5M  1 loop  /snap/core18/1988
+loop1         7:1    0 69.9M  1 loop  /snap/lxd/19188
+loop2         7:2    0 70.4M  1 loop  /snap/lxd/19647
+loop3         7:3    0 55.5M  1 loop  /snap/core18/1997
+loop4         7:4    0 32.3M  1 loop  
+loop5         7:5    0 32.3M  1 loop  /snap/snapd/11402
+loop6         7:6    0 32.3M  1 loop  /snap/snapd/11588
+sr0          11:0    1 1024M  0 rom   
+nvme0n1     259:0    0  3.5T  0 disk  
+└─md1         9:1    0   14T  0 raid0 /raid
+nvme1n1     259:1    0  1.8T  0 disk  
+├─nvme1n1p1 259:2    0  512M  0 part  /boot/efi
+└─nvme1n1p2 259:3    0  1.8T  0 part  
+  └─md0       9:0    0  1.8T  0 raid1 /
+nvme3n1     259:4    0  3.5T  0 disk  
+└─md1         9:1    0   14T  0 raid0 /raid
+nvme4n1     259:5    0  3.5T  0 disk  
+└─md1         9:1    0   14T  0 raid0 /raid
+nvme2n1     259:6    0  1.8T  0 disk  
+├─nvme2n1p1 259:7    0  512M  0 part  
+└─nvme2n1p2 259:8    0  1.8T  0 part  
+  └─md0       9:0    0  1.8T  0 raid1 /
+nvme5n1     259:9    0  3.5T  0 disk  
+└─md1         9:1    0   14T  0 raid0 /raid

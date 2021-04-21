@@ -1,0 +1,393 @@
+	[4mGPU0	GPU1	GPU2	GPU3	GPU4	GPU5	GPU6	GPU7	mlx5_0	mlx5_1	mlx5_2	mlx5_3	mlx5_4	mlx5_5	mlx5_6	mlx5_7	mlx5_8	mlx5_9	CPU Affinity	NUMA Affinity[0m
+GPU0	 X 	NV12	NV12	NV12	NV12	NV12	NV12	NV12	PXB	PXB	SYS	SYS	SYS	SYS	SYS	SYS	SYS	SYS	48-63,176-191	3
+GPU1	NV12	 X 	NV12	NV12	NV12	NV12	NV12	NV12	PXB	PXB	SYS	SYS	SYS	SYS	SYS	SYS	SYS	SYS	48-63,176-191	3
+GPU2	NV12	NV12	 X 	NV12	NV12	NV12	NV12	NV12	SYS	SYS	PXB	PXB	SYS	SYS	SYS	SYS	SYS	SYS	16-31,144-159	1
+GPU3	NV12	NV12	NV12	 X 	NV12	NV12	NV12	NV12	SYS	SYS	PXB	PXB	SYS	SYS	SYS	SYS	SYS	SYS	16-31,144-159	1
+GPU4	NV12	NV12	NV12	NV12	 X 	NV12	NV12	NV12	SYS	SYS	SYS	SYS	PXB	PXB	SYS	SYS	SYS	SYS	112-127,240-254	7
+GPU5	NV12	NV12	NV12	NV12	NV12	 X 	NV12	NV12	SYS	SYS	SYS	SYS	PXB	PXB	SYS	SYS	SYS	SYS	112-127,240-254	7
+GPU6	NV12	NV12	NV12	NV12	NV12	NV12	 X 	NV12	SYS	SYS	SYS	SYS	SYS	SYS	PXB	PXB	SYS	SYS	80-95,208-223	5
+GPU7	NV12	NV12	NV12	NV12	NV12	NV12	NV12	 X 	SYS	SYS	SYS	SYS	SYS	SYS	PXB	PXB	SYS	SYS	80-95,208-223	5
+mlx5_0	PXB	PXB	SYS	SYS	SYS	SYS	SYS	SYS	 X 	PXB	SYS	SYS	SYS	SYS	SYS	SYS	SYS	SYS		
+mlx5_1	PXB	PXB	SYS	SYS	SYS	SYS	SYS	SYS	PXB	 X 	SYS	SYS	SYS	SYS	SYS	SYS	SYS	SYS		
+mlx5_2	SYS	SYS	PXB	PXB	SYS	SYS	SYS	SYS	SYS	SYS	 X 	PXB	SYS	SYS	SYS	SYS	SYS	SYS		
+mlx5_3	SYS	SYS	PXB	PXB	SYS	SYS	SYS	SYS	SYS	SYS	PXB	 X 	SYS	SYS	SYS	SYS	SYS	SYS		
+mlx5_4	SYS	SYS	SYS	SYS	PXB	PXB	SYS	SYS	SYS	SYS	SYS	SYS	 X 	PXB	SYS	SYS	SYS	SYS		
+mlx5_5	SYS	SYS	SYS	SYS	PXB	PXB	SYS	SYS	SYS	SYS	SYS	SYS	PXB	 X 	SYS	SYS	SYS	SYS		
+mlx5_6	SYS	SYS	SYS	SYS	SYS	SYS	PXB	PXB	SYS	SYS	SYS	SYS	SYS	SYS	 X 	PXB	SYS	SYS		
+mlx5_7	SYS	SYS	SYS	SYS	SYS	SYS	PXB	PXB	SYS	SYS	SYS	SYS	SYS	SYS	PXB	 X 	SYS	SYS		
+mlx5_8	SYS	SYS	SYS	SYS	SYS	SYS	SYS	SYS	SYS	SYS	SYS	SYS	SYS	SYS	SYS	SYS	 X 	PIX		
+mlx5_9	SYS	SYS	SYS	SYS	SYS	SYS	SYS	SYS	SYS	SYS	SYS	SYS	SYS	SYS	SYS	SYS	PIX	 X 		
+
+Legend:
+
+  X    = Self
+  SYS  = Connection traversing PCIe as well as the SMP interconnect between NUMA nodes (e.g., QPI/UPI)
+  NODE = Connection traversing PCIe as well as the interconnect between PCIe Host Bridges within a NUMA node
+  PHB  = Connection traversing PCIe as well as a PCIe Host Bridge (typically the CPU)
+  PXB  = Connection traversing multiple PCIe bridges (without traversing the PCIe Host Bridge)
+  PIX  = Connection traversing at most a single PCIe bridge
+  NV#  = Connection traversing a bonded set of # NVLinks
+	[4mGPU0	GPU1	GPU2	GPU3	GPU4	GPU5	GPU6	GPU7	mlx5_0	mlx5_1	mlx5_2	mlx5_3	mlx5_4	mlx5_5	mlx5_6	mlx5_7	mlx5_8	mlx5_9	CPU Affinity	NUMA Affinity[0m
+GPU0	 X 	PXB	SYS	SYS	SYS	SYS	SYS	SYS	PXB	PXB	SYS	SYS	SYS	SYS	SYS	SYS	SYS	SYS	48-63,176-191	3
+GPU1	PXB	 X 	SYS	SYS	SYS	SYS	SYS	SYS	PXB	PXB	SYS	SYS	SYS	SYS	SYS	SYS	SYS	SYS	48-63,176-191	3
+GPU2	SYS	SYS	 X 	PXB	SYS	SYS	SYS	SYS	SYS	SYS	PXB	PXB	SYS	SYS	SYS	SYS	SYS	SYS	16-31,144-159	1
+GPU3	SYS	SYS	PXB	 X 	SYS	SYS	SYS	SYS	SYS	SYS	PXB	PXB	SYS	SYS	SYS	SYS	SYS	SYS	16-31,144-159	1
+GPU4	SYS	SYS	SYS	SYS	 X 	PXB	SYS	SYS	SYS	SYS	SYS	SYS	PXB	PXB	SYS	SYS	SYS	SYS	112-127,240-254	7
+GPU5	SYS	SYS	SYS	SYS	PXB	 X 	SYS	SYS	SYS	SYS	SYS	SYS	PXB	PXB	SYS	SYS	SYS	SYS	112-127,240-254	7
+GPU6	SYS	SYS	SYS	SYS	SYS	SYS	 X 	PXB	SYS	SYS	SYS	SYS	SYS	SYS	PXB	PXB	SYS	SYS	80-95,208-223	5
+GPU7	SYS	SYS	SYS	SYS	SYS	SYS	PXB	 X 	SYS	SYS	SYS	SYS	SYS	SYS	PXB	PXB	SYS	SYS	80-95,208-223	5
+mlx5_0	PXB	PXB	SYS	SYS	SYS	SYS	SYS	SYS	 X 	PXB	SYS	SYS	SYS	SYS	SYS	SYS	SYS	SYS		
+mlx5_1	PXB	PXB	SYS	SYS	SYS	SYS	SYS	SYS	PXB	 X 	SYS	SYS	SYS	SYS	SYS	SYS	SYS	SYS		
+mlx5_2	SYS	SYS	PXB	PXB	SYS	SYS	SYS	SYS	SYS	SYS	 X 	PXB	SYS	SYS	SYS	SYS	SYS	SYS		
+mlx5_3	SYS	SYS	PXB	PXB	SYS	SYS	SYS	SYS	SYS	SYS	PXB	 X 	SYS	SYS	SYS	SYS	SYS	SYS		
+mlx5_4	SYS	SYS	SYS	SYS	PXB	PXB	SYS	SYS	SYS	SYS	SYS	SYS	 X 	PXB	SYS	SYS	SYS	SYS		
+mlx5_5	SYS	SYS	SYS	SYS	PXB	PXB	SYS	SYS	SYS	SYS	SYS	SYS	PXB	 X 	SYS	SYS	SYS	SYS		
+mlx5_6	SYS	SYS	SYS	SYS	SYS	SYS	PXB	PXB	SYS	SYS	SYS	SYS	SYS	SYS	 X 	PXB	SYS	SYS		
+mlx5_7	SYS	SYS	SYS	SYS	SYS	SYS	PXB	PXB	SYS	SYS	SYS	SYS	SYS	SYS	PXB	 X 	SYS	SYS		
+mlx5_8	SYS	SYS	SYS	SYS	SYS	SYS	SYS	SYS	SYS	SYS	SYS	SYS	SYS	SYS	SYS	SYS	 X 	PIX		
+mlx5_9	SYS	SYS	SYS	SYS	SYS	SYS	SYS	SYS	SYS	SYS	SYS	SYS	SYS	SYS	SYS	SYS	PIX	 X 		
+
+Legend:
+
+  X    = Self
+  SYS  = Connection traversing PCIe as well as the SMP interconnect between NUMA nodes (e.g., QPI/UPI)
+  NODE = Connection traversing PCIe as well as the interconnect between PCIe Host Bridges within a NUMA node
+  PHB  = Connection traversing PCIe as well as a PCIe Host Bridge (typically the CPU)
+  PXB  = Connection traversing multiple PCIe bridges (without traversing the PCIe Host Bridge)
+  PIX  = Connection traversing at most a single PCIe bridge
+Wed Apr 21 00:01:09 2021       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 450.102.04   Driver Version: 450.102.04   CUDA Version: 11.0     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  A100-SXM4-40GB      On   | 00000000:07:00.0 Off |                    0 |
+| N/A   28C    P0    53W / 400W |      0MiB / 40537MiB |      0%      Default |
+|                               |                      |             Disabled |
++-------------------------------+----------------------+----------------------+
+|   1  A100-SXM4-40GB      On   | 00000000:0F:00.0 Off |                    0 |
+| N/A   28C    P0    56W / 400W |      0MiB / 40537MiB |      0%      Default |
+|                               |                      |             Disabled |
++-------------------------------+----------------------+----------------------+
+|   2  A100-SXM4-40GB      On   | 00000000:47:00.0 Off |                    0 |
+| N/A   29C    P0    57W / 400W |      0MiB / 40537MiB |      0%      Default |
+|                               |                      |             Disabled |
++-------------------------------+----------------------+----------------------+
+|   3  A100-SXM4-40GB      On   | 00000000:4E:00.0 Off |                    0 |
+| N/A   29C    P0    54W / 400W |      0MiB / 40537MiB |      0%      Default |
+|                               |                      |             Disabled |
++-------------------------------+----------------------+----------------------+
+|   4  A100-SXM4-40GB      On   | 00000000:87:00.0 Off |                    0 |
+| N/A   32C    P0    54W / 400W |      0MiB / 40537MiB |      0%      Default |
+|                               |                      |             Disabled |
++-------------------------------+----------------------+----------------------+
+|   5  A100-SXM4-40GB      On   | 00000000:90:00.0 Off |                    0 |
+| N/A   32C    P0    56W / 400W |      0MiB / 40537MiB |      0%      Default |
+|                               |                      |             Disabled |
++-------------------------------+----------------------+----------------------+
+|   6  A100-SXM4-40GB      On   | 00000000:B7:00.0 Off |                    0 |
+| N/A   32C    P0    54W / 400W |      0MiB / 40537MiB |      0%      Default |
+|                               |                      |             Disabled |
++-------------------------------+----------------------+----------------------+
+|   7  A100-SXM4-40GB      On   | 00000000:BD:00.0 Off |                    0 |
+| N/A   32C    P0    54W / 400W |      0MiB / 40537MiB |      0%      Default |
+|                               |                      |             Disabled |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+
+==============NVSMI LOG==============
+
+Timestamp                                 : Wed Apr 21 00:02:22 2021
+Driver Version                            : 450.102.04
+CUDA Version                              : 11.0
+
+Attached GPUs                             : 8
+GPU 00000000:07:00.0
+    Clocks
+        Graphics                          : 210 MHz
+        SM                                : 210 MHz
+        Memory                            : 1215 MHz
+        Video                             : 585 MHz
+    Applications Clocks
+        Graphics                          : 1095 MHz
+        Memory                            : 1215 MHz
+    Default Applications Clocks
+        Graphics                          : 1095 MHz
+        Memory                            : 1215 MHz
+    Max Clocks
+        Graphics                          : 1410 MHz
+        SM                                : 1410 MHz
+        Memory                            : 1215 MHz
+        Video                             : 1290 MHz
+    Max Customer Boost Clocks
+        Graphics                          : 1410 MHz
+    SM Clock Samples
+        Duration                          : Not Found
+        Number of Samples                 : Not Found
+        Max                               : Not Found
+        Min                               : Not Found
+        Avg                               : Not Found
+    Memory Clock Samples
+        Duration                          : Not Found
+        Number of Samples                 : Not Found
+        Max                               : Not Found
+        Min                               : Not Found
+        Avg                               : Not Found
+    Clock Policy
+        Auto Boost                        : N/A
+        Auto Boost Default                : N/A
+
+GPU 00000000:0F:00.0
+    Clocks
+        Graphics                          : 210 MHz
+        SM                                : 210 MHz
+        Memory                            : 1215 MHz
+        Video                             : 585 MHz
+    Applications Clocks
+        Graphics                          : 1095 MHz
+        Memory                            : 1215 MHz
+    Default Applications Clocks
+        Graphics                          : 1095 MHz
+        Memory                            : 1215 MHz
+    Max Clocks
+        Graphics                          : 1410 MHz
+        SM                                : 1410 MHz
+        Memory                            : 1215 MHz
+        Video                             : 1290 MHz
+    Max Customer Boost Clocks
+        Graphics                          : 1410 MHz
+    SM Clock Samples
+        Duration                          : Not Found
+        Number of Samples                 : Not Found
+        Max                               : Not Found
+        Min                               : Not Found
+        Avg                               : Not Found
+    Memory Clock Samples
+        Duration                          : Not Found
+        Number of Samples                 : Not Found
+        Max                               : Not Found
+        Min                               : Not Found
+        Avg                               : Not Found
+    Clock Policy
+        Auto Boost                        : N/A
+        Auto Boost Default                : N/A
+
+GPU 00000000:47:00.0
+    Clocks
+        Graphics                          : 210 MHz
+        SM                                : 210 MHz
+        Memory                            : 1215 MHz
+        Video                             : 585 MHz
+    Applications Clocks
+        Graphics                          : 1095 MHz
+        Memory                            : 1215 MHz
+    Default Applications Clocks
+        Graphics                          : 1095 MHz
+        Memory                            : 1215 MHz
+    Max Clocks
+        Graphics                          : 1410 MHz
+        SM                                : 1410 MHz
+        Memory                            : 1215 MHz
+        Video                             : 1290 MHz
+    Max Customer Boost Clocks
+        Graphics                          : 1410 MHz
+    SM Clock Samples
+        Duration                          : Not Found
+        Number of Samples                 : Not Found
+        Max                               : Not Found
+        Min                               : Not Found
+        Avg                               : Not Found
+    Memory Clock Samples
+        Duration                          : Not Found
+        Number of Samples                 : Not Found
+        Max                               : Not Found
+        Min                               : Not Found
+        Avg                               : Not Found
+    Clock Policy
+        Auto Boost                        : N/A
+        Auto Boost Default                : N/A
+
+GPU 00000000:4E:00.0
+    Clocks
+        Graphics                          : 210 MHz
+        SM                                : 210 MHz
+        Memory                            : 1215 MHz
+        Video                             : 585 MHz
+    Applications Clocks
+        Graphics                          : 1095 MHz
+        Memory                            : 1215 MHz
+    Default Applications Clocks
+        Graphics                          : 1095 MHz
+        Memory                            : 1215 MHz
+    Max Clocks
+        Graphics                          : 1410 MHz
+        SM                                : 1410 MHz
+        Memory                            : 1215 MHz
+        Video                             : 1290 MHz
+    Max Customer Boost Clocks
+        Graphics                          : 1410 MHz
+    SM Clock Samples
+        Duration                          : Not Found
+        Number of Samples                 : Not Found
+        Max                               : Not Found
+        Min                               : Not Found
+        Avg                               : Not Found
+    Memory Clock Samples
+        Duration                          : Not Found
+        Number of Samples                 : Not Found
+        Max                               : Not Found
+        Min                               : Not Found
+        Avg                               : Not Found
+    Clock Policy
+        Auto Boost                        : N/A
+        Auto Boost Default                : N/A
+
+GPU 00000000:87:00.0
+    Clocks
+        Graphics                          : 210 MHz
+        SM                                : 210 MHz
+        Memory                            : 1215 MHz
+        Video                             : 585 MHz
+    Applications Clocks
+        Graphics                          : 1095 MHz
+        Memory                            : 1215 MHz
+    Default Applications Clocks
+        Graphics                          : 1095 MHz
+        Memory                            : 1215 MHz
+    Max Clocks
+        Graphics                          : 1410 MHz
+        SM                                : 1410 MHz
+        Memory                            : 1215 MHz
+        Video                             : 1290 MHz
+    Max Customer Boost Clocks
+        Graphics                          : 1410 MHz
+    SM Clock Samples
+        Duration                          : Not Found
+        Number of Samples                 : Not Found
+        Max                               : Not Found
+        Min                               : Not Found
+        Avg                               : Not Found
+    Memory Clock Samples
+        Duration                          : Not Found
+        Number of Samples                 : Not Found
+        Max                               : Not Found
+        Min                               : Not Found
+        Avg                               : Not Found
+    Clock Policy
+        Auto Boost                        : N/A
+        Auto Boost Default                : N/A
+
+GPU 00000000:90:00.0
+    Clocks
+        Graphics                          : 210 MHz
+        SM                                : 210 MHz
+        Memory                            : 1215 MHz
+        Video                             : 585 MHz
+    Applications Clocks
+        Graphics                          : 1095 MHz
+        Memory                            : 1215 MHz
+    Default Applications Clocks
+        Graphics                          : 1095 MHz
+        Memory                            : 1215 MHz
+    Max Clocks
+        Graphics                          : 1410 MHz
+        SM                                : 1410 MHz
+        Memory                            : 1215 MHz
+        Video                             : 1290 MHz
+    Max Customer Boost Clocks
+        Graphics                          : 1410 MHz
+    SM Clock Samples
+        Duration                          : Not Found
+        Number of Samples                 : Not Found
+        Max                               : Not Found
+        Min                               : Not Found
+        Avg                               : Not Found
+    Memory Clock Samples
+        Duration                          : Not Found
+        Number of Samples                 : Not Found
+        Max                               : Not Found
+        Min                               : Not Found
+        Avg                               : Not Found
+    Clock Policy
+        Auto Boost                        : N/A
+        Auto Boost Default                : N/A
+
+GPU 00000000:B7:00.0
+    Clocks
+        Graphics                          : 210 MHz
+        SM                                : 210 MHz
+        Memory                            : 1215 MHz
+        Video                             : 585 MHz
+    Applications Clocks
+        Graphics                          : 1095 MHz
+        Memory                            : 1215 MHz
+    Default Applications Clocks
+        Graphics                          : 1095 MHz
+        Memory                            : 1215 MHz
+    Max Clocks
+        Graphics                          : 1410 MHz
+        SM                                : 1410 MHz
+        Memory                            : 1215 MHz
+        Video                             : 1290 MHz
+    Max Customer Boost Clocks
+        Graphics                          : 1410 MHz
+    SM Clock Samples
+        Duration                          : Not Found
+        Number of Samples                 : Not Found
+        Max                               : Not Found
+        Min                               : Not Found
+        Avg                               : Not Found
+    Memory Clock Samples
+        Duration                          : Not Found
+        Number of Samples                 : Not Found
+        Max                               : Not Found
+        Min                               : Not Found
+        Avg                               : Not Found
+    Clock Policy
+        Auto Boost                        : N/A
+        Auto Boost Default                : N/A
+
+GPU 00000000:BD:00.0
+    Clocks
+        Graphics                          : 210 MHz
+        SM                                : 210 MHz
+        Memory                            : 1215 MHz
+        Video                             : 585 MHz
+    Applications Clocks
+        Graphics                          : 1095 MHz
+        Memory                            : 1215 MHz
+    Default Applications Clocks
+        Graphics                          : 1095 MHz
+        Memory                            : 1215 MHz
+    Max Clocks
+        Graphics                          : 1410 MHz
+        SM                                : 1410 MHz
+        Memory                            : 1215 MHz
+        Video                             : 1290 MHz
+    Max Customer Boost Clocks
+        Graphics                          : 1410 MHz
+    SM Clock Samples
+        Duration                          : Not Found
+        Number of Samples                 : Not Found
+        Max                               : Not Found
+        Min                               : Not Found
+        Avg                               : Not Found
+    Memory Clock Samples
+        Duration                          : Not Found
+        Number of Samples                 : Not Found
+        Max                               : Not Found
+        Min                               : Not Found
+        Avg                               : Not Found
+    Clock Policy
+        Auto Boost                        : N/A
+        Auto Boost Default                : N/A
+
