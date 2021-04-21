@@ -45,7 +45,7 @@ The values are medians of the 10 runs, and error bars the standard deviation.
 ![first](./figs/read_single_file/grid_plot_first.png)
 
 
-#### Second
+#### Last
 ![last](./figs/read_single_file/grid_plot_last.png)
 
 #### Diff
